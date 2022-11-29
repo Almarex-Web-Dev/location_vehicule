@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <report
+            id="report_location_vehicule"
+            model="location.vehicule"
+            string="Location de vehicule"
+            name="location_vehicule.report_location_vehicule_view"
+            file="location_vehicule.report_location_vehicule_view"
+            report_type="qweb-pdf"/>
+
+    <record id="paperformat_report_location_vehicule" model="report.paperformat">
+            <field name="name">LOCATION</field>
+            <field name="default" eval="True" />
+            <field name="format">A4</field>
+            <field name="page_height">0</field>
+            <field name="page_width">0</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">8</field>
+            <field name="margin_bottom">8</field>
+            <field name="margin_left">15</field>
+            <field name="margin_right">15</field>
+            <field name="header_line" eval="False" />
+            <field name="header_spacing">30</field>
+            <field name="dpi">90</field>
+        </record>
+
+    <record id="report_location_vehicule" model="ir.actions.report">
+        <field name="paperformat_id" ref="location_vehicule.paperformat_report_location_vehicule"/>
+    </record>
+
+</odoo>

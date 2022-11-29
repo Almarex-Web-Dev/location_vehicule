@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.ui.view" id="retour_vehicule_form_view">
+        <field name="name">retour.vehicule.form.view</field>
+        <field name="model">retour.vehicule</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group col="4">
+                        <field name="immatriculation"/>
+                        <field name="immatriculation" invisible="1"/>
+                    </group>
+                    <field name="vehicule_ids"/>
+                    <footer>
+                        <button name="retour_vehicule" type="object"
+                                string="SAUVEGARDER" class="oe_highlight"
+                                confirm="Voulez-vous remettre ce vehicule en location?"/>
+                        <button special="cancel" string="RETOUR"/>
+                    </footer>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="retour_vehicule_action">
+        <field name="name">RETOUR VEHICULE</field>
+        <field name="res_model">retour.vehicule</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+    <menuitem id="location_retour_vehicule_menu" name="RETOUR VEHICULE" sequence="50" parent="location_top_menu"
+              action="location_vehicule.retour_vehicule_action"/>
+
+
+</odoo>

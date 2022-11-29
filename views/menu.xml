@@ -1,0 +1,7 @@
+<odoo>
+	<data>
+		<menuitem id="location_top_menu" name="LOCATION DE VEHICULES" sequence="10" web_icon="location_vehicule,static/description/icon.png" />
+		<menuitem id="location_sub_menu" name="ACTEURS" sequence="20" parent="location_top_menu" />
+		<menuitem id="location_config_menu" name="CONFIGURATIONS" sequence="60" parent="location_top_menu" />
+	</data>
+</odoo>

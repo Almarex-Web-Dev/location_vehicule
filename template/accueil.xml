@@ -1,0 +1,1058 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <template id="accueil_location" name="ACCUEIL">
+        <t t-call="website.layout">
+            <link href="/location_vehicule/static/src/css/custom-theme-accueil.css" rel="stylesheet"/>
+            <section class="s_parallax parallax s_parallax_is_fixed bg-black-50 o_half_screen_height o_colored_level"
+                     data-scroll-background-ratio="1" data-snippet="s_parallax" data-name="Parallax">
+                <span class="s_parallax_bg oe_img_bg"
+                      style="background-image: url(/location_vehicule/static/description/voitures.jpg); background-position: 50% 75%;"
+                      data-original-id="502" data-original-src="/location_vehicule/static/description/voitures.jpeg"
+                      data-mimetype="image/jpeg" data-resize-width="1832"/>
+                <br/>
+                <br/>
+                <font style="font-size: 62px;" class="">
+                    <spam>Vous cherchez un véhicule ?</spam>
+                    <br/>
+                    <spam>Vous êtes au bon endroit.</spam>
+                </font>
+                <div class="o_we_bg_filter bg-black-50"/>
+                <div class="oe_structure oe_empty"/>
+                <div class="row">
+                    <div class="col-md-6">
+                        <form action="/vehicules" method="POST"
+                              style="align:left;margin-left:580px;">
+                            <div class="form-row">
+                                <input type="submit" style="align:left" class="btn btn-primary"
+                                       value="LOUER UN VEHICULE"/>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            <div class="container" style="margin-bottom:%;margin-top:5%">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 pb16 o_colored_level pt0">
+                        <h2 class="" style="color:blue;margin-left:0px;">La location de véhicules</h2>
+                        <br/>
+                        <h2 class="" style="color:blue;margin-left:0px;">La qualité au meilleur prix</h2>
+                        <p class="o_default_snippet_text">Que vous cherchiez à louer une voiture pas cher,
+                            la location de véhicule spécifiques comme un plateau voiture ou un minibus,
+                            ou un camion de déménagement en aller simple,l'entreprise détient
+                            la solution à tous vos besoins sur la route. Voiture de tourisme ou utilitaires,
+                            pour un besoin professionnel ou des vacances en famille,
+                            trouvez le véhicule qui répond à vos besoins sur notre site ou dans l'une de nos 80 agences
+                            de location en cote d'ivoire.
+                        </p>
+
+                    </div>
+
+                    <div class="col-lg-6 pt16 o_colored_level pb0" style="background:blue;margin-top:0px;">
+                        <h2 class="">
+                            <br/>
+                        </h2>
+                        <h2 class="">Location de voiture</h2>
+                        <p class="">De l'économie à la berline en passant par la citadine,
+                            pour les vacances pour un déplacement professionnel,
+                            louez votre véhicule de tourisme en quelques clics
+                            dans l'une des agences.
+                            Complétez votre réservation de voiture par de nombreuses garanties
+                            et options destinées à vous offrir sécurité et confort en route.
+                        </p>
+                        <div>
+                            <p>
+                                <a href="#" class="btn btn-primary mb-2 o_default_snippet_text">En savoir plus</a>
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="container" style="margin-bottom:5%;margin-top:1%">
+                <div class="row">
+                    <div class="col-lg-4 pt32 pb32 text-center o_colored_level">
+                        <img class="img-fluid o_we_custom_image m-3 o_we_selected_image"
+                             src="/location_vehicule/static/description/r_a.png"></img>
+                        <h3 class="o_default_snippet_text">Remises et avantages</h3>
+                        <p class="o_default_snippet_text">Devenez un membre Privilege</p>
+                    </div>
+                    <div class="col-lg-4 pt32 pb32 text-center o_colored_level">
+                        <img class="img-fluid o_we_custom_image m-3 o_we_selected_image"
+                             src="/location_vehicule/static/description/p.png"></img>
+                        <h3 class="o_default_snippet_text">Professionnels</h3>
+                        <p class="o_default_snippet_text">Louez une voiture autant de fois que vous le souhaitez</p>
+                    </div>
+                    <div class="col-lg-4 pt32 pb32 text-center o_colored_level">
+                        <img class="img-fluid o_we_custom_image m-3 o_we_selected_image"
+                             src="/location_vehicule/static/description/e_l.png"></img>
+                        <h3 class="o_default_snippet_text">Enregistrement en ligne</h3>
+                        <p class="o_default_snippet_text">Mettez vous en route rapidement grâce à l'enregistrement en
+                            ligne
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <form action="/gamme/fidelite" method="POST"
+                              style="align:left;margin-left:60px;margin-top:-8%">
+                            <div class="form-row">
+                                <input type="submit" style="align:left;font-size:13px" class="btn btn-primary"
+                                       value="DECOUVRER NOTRE GAMME DE FIDELITE"/>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <form action="/vehicules" method="POST"
+                              style="align:left;margin-left:490px;margin-top:-8%">
+                            <div class="form-row">
+                                <input type="submit" style="align:left;font-size:13px" class="btn btn-primary"
+                                       value="RESERVER MAINTENANT"/>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <form action="/enreg/ligne" method="POST"
+                              style="align:left;margin-left:860px;margin-top:-8%">
+                            <div class="form-row">
+                                <input type="submit" style="align:left;font-size:13px" class="btn btn-primary"
+                                       value="S'ENREGISTRER EN LIGNE"/>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <div class="container" style="margin-bottom:5%;margin-top:-8%">
+                <h3>Nos partenaires</h3>
+                <div class="row d-flex align-items-stretch" style="align:left;margin-left:100px;margin-top:0%">
+                    <div class="col-lg-2 s_col_no_bgcolor pt16 pb16">
+                        <div class="card bg-white h-10">
+                            <img class="card-img-top" src="/location_vehicule/static/description/par1.png" alt=""
+                                 loading="lazy"
+                                 data-original-id="281" data-original-src="/web/image/website.library_image_11"
+                                 data-mimetype="image/jpeg"/>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 s_col_no_bgcolor pt16 pb16" style="margin-left:150px;margin-right:0px">
+                        <div class="card bg-white h-10">
+                            <img class="card-img-top" src="/location_vehicule/static/description/part2.png" alt=""
+                                 loading="lazy"
+                                 data-original-id="282" data-original-src="/web/image/website.library_image_13"
+                                 data-mimetype="image/jpeg"/>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 s_col_no_bgcolor pt16 pb16" style="margin-left:150px;margin-right:0px">
+                        <div class="card bg-white h-10">
+                            <img class="card-img-top" src="/location_vehicule/static/description/part3.png" alt=""
+                                 loading="lazy"
+                                 data-original-id="283" data-original-src="/web/image/website.library_image_07"
+                                 data-mimetype="image/jpeg"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <template id="location_vehicule" name="VEHICULES">
+        <t t-call="website.layout">
+            <link href="/location_vehicule/static/src/css/custom-theme.css" rel="stylesheet"/>
+            <div class="container" style="margin-bottom:5%;margin-top:2%">
+                <div class="">
+                    <a style="margin-left:800px;margin-right:0px" class="nav-link" href="/accueil">Retour à la page
+                        d'accueil
+                    </a>
+                </div>
+                <div class="row" t-if="not vehicule">
+                    <div class="col-sm-12 form-shadow">
+                        <h1 class="text-center">AUCUN VEHICULE N'EST DISPONIBLE POUR LE MOMMENT</h1>
+                    </div>
+                </div>
+                <div class="row" t-if="vehicule">
+                    <div class="col-sm-12">
+                        <h1 class="text-center">VEHICULE(S) A LOUER</h1>
+                    </div>
+                    <t t-foreach="vehicule" t-as="vehi">
+                        <div class="col-md-4 form-shadow">
+                            <div class="card" align="center">
+                                <center>
+                                    <img t-if="vehi.image" t-attf-src="data:image/jpg;base64,{{vehi.image}}"
+                                         alt="Avatar"
+                                         style="width:150%;max-height: 140px;object-fit: cover;"/>
+                                    <img t-if="not vehi.image" src="/location_vehicule/static/src/img/default.png"
+                                         alt="Avatar"
+                                         style="width:100%;max-height: 100px;object-fit: cover;"/>
+                                    <br/>
+                                    <br/>
+                                    <div class="container">
+                                        <h4>
+                                            <b>
+                                                <span t-esc="vehi.name"/>
+                                            </b>
+                                        </h4>
+                                        <h4>
+                                            <b>VILLE :
+                                                <span t-esc="vehi.ville.name"/>
+                                            </b>
+                                        </h4>
+                                    </div>
+                                    <form role="form" action="/details/vehicule" method="post">
+                                        <input type="hidden" t-att-value="vehi.id" name="vehi_id"/>
+                                        <p>
+                                            <button class="btn btn-primary" type="submit">EN SAVOIR PLUS</button>
+                                        </p>
+                                    </form>
+                                </center>
+                            </div>
+                        </div>
+                    </t>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <template id="details_location_vehicule" name="DETAILS LOCATION">
+        <t t-call="website.layout">
+            <link href="/location_vehicule/static/src/css/custom-theme.css" rel="stylesheet"/>
+            <t t-foreach="vehicule" t-as="vehi">
+                <div class="container">
+                    <div class="">
+                        <a style="margin-left:800px;margin-right:0px" class="nav-link" href="/accueil">Retour à la page
+                            d'accueil
+                        </a>
+                    </div>
+                    <div class="col-sm-12 form-shadow" style="margin-top:5%">
+                        <div class="row" style="margin-top:5%">
+                            <div class="col-md-6">
+                                <div id="carouselExampleIndicators"
+                                     class="carousel  s_carousel_rounded carousel-fade slide"
+                                     data-ride="carousel" data-interval="0">
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#carouselExampleIndicators" data-slide-to="0"
+                                            class="active"></li>
+                                        <li data-target="#carouselExampleIndicators" t-if="vehi.image"
+                                            data-slide-to="1"></li>
+                                        <li data-target="#carouselExampleIndicators" t-if="vehi.image"
+                                            data-slide-to="2"></li>
+                                        <li data-target="#carouselExampleIndicators" t-if="vehi.image"
+                                            data-slide-to="3"></li>
+                                        <li data-target="#carouselExampleIndicators" t-if="vehi.image"
+                                            data-slide-to="4"></li>
+                                        <li data-target="#carouselExampleIndicators" t-if="vehi.image"
+                                            data-slide-to="5"></li>
+                                        <li data-target="#carouselExampleIndicators" t-if="vehi.image"
+                                            data-slide-to="6"></li>
+                                        <li data-target="#carouselExampleIndicators" t-if="vehi.image"
+                                            data-slide-to="7"></li>
+                                    </ol>
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img class="d-block w-100" t-if="vehi.image"
+                                                 style="width:100%;max-height: 200px;object-fit: cover;"
+                                                 t-attf-src="data:image/jpg;base64,{{vehi.image}}" alt="First slide"/>
+                                            <img t-if="not vehi.image" src="/theme_immo/static/src/img/default.png"
+                                                 alt="Avatar"
+                                                 style="width:100%;max-height: 200px;object-fit: cover;"/>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="d-block w-100" t-if="vehi.image"
+                                                 style="width:100%;max-height: 200px;object-fit: cover;"
+                                                 t-attf-src="data:image/jpg;base64,{{vehi.image}}" alt="Second slide"/>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="d-block w-100" t-if="vehi.image"
+                                                 style="width:100%;max-height: 200px;object-fit: cover;"
+                                                 t-attf-src="data:image/jpg;base64,{{vehi.image}}" alt="Third slide"/>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="d-block w-100" t-if="vehi.image"
+                                                 style="width:100%;max-height: 200px;object-fit: cover;"
+                                                 t-attf-src="data:image/jpg;base64,{{vehi.image}}" alt="Foor slide"/>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="d-block w-100" t-if="vehi.image"
+                                                 style="width:100%;max-height: 200px;object-fit: cover;"
+                                                 t-attf-src="data:image/jpg;base64,{{vehi.image}}" alt="Five slide"/>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="d-block w-100" t-if="vehi.image"
+                                                 style="width:100%;max-height: 200px;object-fit: cover;"
+                                                 t-attf-src="data:image/jpg;base64,{{vehi.image}}" alt="Six slide"/>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="d-block w-100" t-if="vehi.image"
+                                                 style="width:100%;max-height: 200px;object-fit: cover;"
+                                                 t-attf-src="data:image/jpg;base64,{{vehi.image}}" alt="Seven slide"/>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="d-block w-100" t-if="vehi.image"
+                                                 style="width:100%;max-height: 200px;object-fit: cover;"
+                                                 t-attf-src="data:image/jpg;base64,{{vehi.image}}" alt="Eight slide"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-1"/>
+                            <div class="col-md-5">
+                                <table class="table">
+                                    <tr>
+                                        <td width="100%"
+                                            style="padding: 0.0rem;vertical-align: top;border-top: none;">
+                                            <h3>
+                                                <b>
+                                                    <span t-esc="vehi.name"/>
+                                                </b>
+                                            </h3>
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="100%"
+                                            style="padding: 0.0rem;vertical-align: top;border-top: none;">
+                                            MARQUE :
+                                            <b>
+                                                <span t-esc="vehi.marque_vehicule_id.name"/>
+                                            </b>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="100%"
+                                            style="padding: 0.0rem;vertical-align: top;border-top: none;">
+                                            MODELE :
+                                            <b>
+                                                <span t-esc="vehi.modele_vehicule_id.name"/>
+                                            </b>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="100%"
+                                            style="padding: 0.0rem;vertical-align: top;border-top: none;">
+                                            TRANSMISSION :
+                                            <b>
+                                                <t t-if="vehi.transmission =='manual'">
+                                                    <spam>MANUELLE</spam>
+                                                </t>
+                                                <t t-if="vehi.transmission =='automatic'">
+                                                    <spam>AUTOMATIQUE</spam>
+                                                </t>
+                                            </b>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="100%"
+                                            style="padding: 0.0rem;vertical-align: top;border-top: none;">
+                                            TYPE DE CARBURANT :
+                                            <b>
+                                                <t t-if="vehi.type_carburant =='essence'">
+                                                    <spam>ESSENCE</spam>
+                                                </t>
+                                                <t t-if="vehi.type_carburant =='diesel'">
+                                                    <spam>DIELSEL</spam>
+                                                </t>
+                                                <t t-if="vehi.type_carburant =='electric'">
+                                                    <spam>ELECTRIQUE</spam>
+                                                </t>
+                                                <t t-if="vehi.type_carburant =='hybrid'">
+                                                    <spam>HYBRIDE</spam>
+                                                </t>
+                                            </b>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="100%"
+                                            style="padding: 0.0rem;vertical-align: top;border-top: none;">
+                                            MONTANT JOURNALIER :
+                                            <b>
+                                                <span t-esc="vehi.montant_journalier"
+                                                      t-options='{"widget": "float", "precision": 0}'/>
+                                                FCFA
+                                            </b>
+                                        </td>
+                                    </tr>
+
+                                </table>
+                            </div>
+                            <div class="row" style="align:left;margin-left:700px;margin-top:%">
+                                <div class="col-md-5">
+                                    <table class="table">
+                                        <tr>
+                                            <td width=""
+                                                style="padding: 0.0rem;vertical-align: top;border-top: none;">
+                                                <form role="form" action="/inscription/locataire"
+                                                      method="post">
+                                                    <input type="hidden" t-att-value="vehi.id" name="vehi_id"/>
+                                                    <div class="form-row">
+                                                        <input type="submit" style="align:left;font-size:13px"
+                                                               class="btn btn-primary"
+                                                               value="LOUER CE VEHICULE"/>
+                                                    </div>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+
+    <template id="formulaire_locataire" name="FORMULAIRE LOCATAIRE">
+        <t t-call="website.layout">
+            <link href="/location_vehicule/static/src/css/custom-theme.css" rel="stylesheet"/>
+            <div class="container">
+                <div class="">
+                    <a style="margin-left:800px;margin-right:0px" class="nav-link" href="/accueil">Retour à la page
+                        d'accueil
+                    </a>
+                </div>
+                <form action="/inscription/details" method="post">
+                    <div class="row text-cente">
+                        <br/>
+                        <h1 class="text-center" style="color:red;margin-left: 350px;">INSCRIPTION LOCATAIRE</h1>
+                        <br/>
+                        <div class="col-sm-12 form-shadow" style="  padding: 10px;top: 0px;">
+                            <br/>
+                            <h1 class="text-center" style="font-size:20px;">INFORMATIONS CLIENT</h1>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label style="margin-right: 0px;">NOM *:</label>
+                                        <input name="nom" class="form-control" type="text" id="nom" t-att-value="nom"
+                                               required="True"/>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label style="margin-right: 0px;">PRENOM(S) *:</label>
+                                        <input name="prenom" class="form-control" type="text" id="prenom"
+                                               t-att-value="prenom"
+                                               required="True"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label style="margin-right: 0px;">CONTACT *:</label>
+                                        <input name="contact" class="form-control" type="text" id="contact"
+                                               t-att-value="contact"
+                                               required="True"/>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label style="margin-right: 0px;">EMAIL *:</label>
+                                        <input name="email" class="form-control" type="text" id="email"
+                                               t-att-value="email"
+                                               required="True"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label style="margin-right: 0px;">VILLE *:</label>
+                                        <select class="form-control form-control-alternative" name="ville"
+                                                required="True">
+                                            <option value="">Ville</option>
+                                            <t t-foreach="ville" t-as="vil">
+                                                <option t-attf-value="#{vil.id}">
+                                                    <t
+                                                            t-esc="vil.name"/>
+                                                </option>
+                                            </t>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label>TYPE DE PIECE *:</label>
+                                        <select class="form-control form-control-alternative" name="type_piece"
+                                                required="True">
+                                            <option value="">Type pièce</option>
+                                            <t t-foreach="type_piece_identite" t-as="type_piece">
+                                                <option t-attf-value="#{type_piece.id}">
+                                                    <t
+                                                            t-esc="type_piece.name"/>
+                                                </option>
+                                            </t>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label>N° DE LA PIECE *:</label>
+                                        <input name="numero_piece" class="form-control" type="text" id="numero_piece"
+                                               t-att-value="numero_piece"
+                                               required="True"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <h1 class="text-center" style="font-size:20px;">INFORMATIONS SUR LA LOCATION DU VEHICULE
+                            </h1>
+                            <br/>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="date_naiss">DATE DU DEBUT DE LA LOCATION *:</label>
+                                        <input type="date" class="form-control" required="True"
+                                               name="date_debut_location"/>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="date_naiss">DATE DU FIN DE LA LOCATION *:</label>
+                                        <input type="date" class="form-control" required="True"
+                                               name="date_fin_location"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label>DUREE DE LA LOCATION *:</label>
+                                        <input name="duree_location" class="form-control" type="number"
+                                               id="duree_location"
+                                               t-att-value="duree_location"
+                                               required="True"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <br/>
+                            <br/>
+                            <div class="row">
+                                <div class="col-md-4"/>
+                                <div class="col-md-4">
+                                    <input type="hidden" name="vehicule" id="vehicule" t-att-value="vehicule.id"/>
+                                    <p>
+                                        <button type="submit" style="align:left;margin-left: 150px;"
+                                                class="btn btn-primary">
+                                            VALIDER
+                                        </button>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </t>
+    </template>
+
+    <template id="detail_inscription_location" name="DETAILS INSCRIPTION">
+        <t t-call="website.layout">
+            <link href="/location_vehicule/static/src/css/custom-theme.css" rel="stylesheet"/>
+            <div class="container">
+                <div class="">
+                    <a style="margin-left:800px;margin-right:0px" class="nav-link" href="/accueil">Retour à la page
+                        d'accueil
+                    </a>
+                </div>
+                <br/>
+                <h1 class="text-center" style="color:red">RECAPITULATIF</h1>
+                <br/>
+                <div class="col-sm-12 form-shadow">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label style="font-size:20px;" for="vehicule" class="required">
+                                    <b>VEHICULE :</b>
+                                </label>
+                                <span style="font-size:20px;" t-esc="vehicule.name"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label style="font-size:20px;" for="nom" class="required">
+                                    <b>NOM :</b>
+                                </label>
+                                <span style="font-size:20px;" t-esc="nom"/>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label style="font-size:20px;" for="prenom" class="required">
+                                    <b>PRENOM(S) :</b>
+                                </label>
+                                <span style="font-size:20px;" t-esc="prenom"/>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label style="font-size:20px;" for="email" class="required">
+                                    <b>EMAIL :</b>
+                                </label>
+                                <span style="font-size:20px;" t-esc="email"/>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label style="font-size:20px;" for="contact" class="required">
+                                    <b>CONTACT :</b>
+                                </label>
+                                <span style="font-size:20px;" t-esc="contact"/>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label style="font-size:20px;" for="type_piece_id" class="required">
+                                    <b>TYPE DE PIECE :</b>
+                                </label>
+                                <span style="font-size:20px;" t-esc="type_piece_id.name"/>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label style="font-size:20px;" for="numero_piece" class="required">
+                                    <b>N° DE PIECE :</b>
+                                </label>
+                                <span style="font-size:20px;" t-esc="numero_piece"/>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label style="font-size:20px;" for="ville_id" class="required">
+                                    <b>VILLE :</b>
+                                </label>
+                                <span style="font-size:20px;" t-esc="ville_id.name"/>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label style="font-size:20px;" for="date_debut_location" class="required">
+                                    <b>DATE DE DEBUT DE LA LOCATION :</b>
+                                </label>
+                                <span style="font-size:20px;" t-esc="date_debut_location"/>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label style="font-size:20px;" for="date_fin_location" class="required">
+                                    <b>DATE DE FIN DE LA LOCATION :</b>
+                                </label>
+                                <span style="font-size:20px;" t-esc="date_fin_location"/>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label style="font-size:20px;" for="duree_location" class="required">
+                                    <b>MONTANT JOURNALIER :</b>
+                                </label>
+                                <span style="font-size:20px;" t-esc="vehicule.montant_journalier"/>
+                                <span></span>
+                                <span style="font-size:20px;">CFA</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label style="font-size:20px;" for="duree_location" class="required">
+                                    <b>DUREE DE LA LOCATION :</b>
+                                </label>
+                                <span style="font-size:20px;" t-esc="duree_location"/>
+                                <span></span>
+                                <span style="font-size:20px;">JOUR(S)</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label style="font-size:20px;" for="duree_location" class="required">
+                                    <b>MONTANT TOTAL DE LA LOCATION :</b>
+                                </label>
+                                <span style="font-size:20px;" t-esc="montant_total_location"/>
+                                <span></span>
+                                <span style="font-size:20px;">CFA</span>
+                            </div>
+                        </div>
+                    </div>
+                    <br/>
+                    <br/>
+                    <div class="col-xs-6" style="margin-left:300px">
+                        <form action="/modifier/inscription/locataire" method="POST">
+                            <div class="form-row">
+                                <input type="hidden" name="vehicule" t-att-value="vehicule.id"/>
+                                <input type="hidden" name="ville_id" t-att-value="ville_id.id"/>
+                                <input type="hidden" name="type_piece_id" t-att-value="type_piece_id.id"/>
+                                <input type="hidden" name="nom" t-att-value="nom"/>
+                                <input type="hidden" name="prenom" t-att-value="prenom"/>
+                                <input type="hidden" name="email" t-att-value="email"/>
+                                <input type="hidden" name="contact" t-att-value="contact"/>
+                                <input type="hidden" name="numero_piece" t-att-value="numero_piece"/>
+                                <input type="hidden" name="date_debut_location" t-att-value="date_debut_location"/>
+                                <input type="hidden" name="date_fin_location" t-att-value="date_fin_location"/>
+                                <input type="hidden" name="duree_location" t-att-value="duree_location"/>
+                                <input type="hidden" name="montant_total_location"
+                                       t-att-value="montant_total_location"/>
+                                <input type="submit" style="align:left" class="btn btn-primary"
+                                       value="MODIFIER"/>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-xs-6 text-right" style="margin-left:500px;margin-top:-40px">
+                        <form action="/validation/location" method="POST">
+                            <div class="form-row">
+                                <input type="hidden" name="vehicule" t-att-value="vehicule.id"/>
+                                <input type="hidden" name="ville_id" t-att-value="ville_id.id"/>
+                                <input type="hidden" name="type_piece_id" t-att-value="type_piece_id.id"/>
+                                <input type="hidden" name="nom" t-att-value="nom"/>
+                                <input type="hidden" name="prenom" t-att-value="prenom"/>
+                                <input type="hidden" name="email" t-att-value="email"/>
+                                <input type="hidden" name="contact" t-att-value="contact"/>
+                                <input type="hidden" name="numero_piece" t-att-value="numero_piece"/>
+                                <input type="hidden" name="date_debut_location" t-att-value="date_debut_location"/>
+                                <input type="hidden" name="date_fin_location" t-att-value="date_fin_location"/>
+                                <input type="hidden" name="duree_location" t-att-value="duree_location"/>
+                                <input type="hidden" name="montant_total_location"
+                                       t-att-value="montant_total_location"/>
+                                <input type="submit" style="align:left" class="btn btn-primary"
+                                       value="VALIDER LA LOCATION"/>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </t>
+    </template>
+
+    <template id="modif_formulaire_locataire" name="FORMULAIRE LOCATAIRE">
+        <t t-call="website.layout">
+            <link href="/location_vehicule/static/src/css/custom-theme.css" rel="stylesheet"/>
+            <div class="container">
+                <div class="">
+                    <a style="margin-left:800px;margin-right:0px" class="nav-link" href="/accueil">Retour à la page
+                        d'accueil
+                    </a>
+                </div>
+                <form action="/modif/details/inscription" method="post">
+                    <div class="row text-cente">
+                        <br/>
+                        <h1 class="text-center" style="color:red;margin-left: 350px;">INSCRIPTION LOCATAIRE</h1>
+                        <br/>
+                        <div class="col-sm-12 form-shadow" style="  padding: 10px;top: 0px;">
+                            <br/>
+                            <h1 class="text-center" style="font-size:20px;">INFORMATIONS CLIENT</h1>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label style="margin-right: 0px;">NOM *:</label>
+                                        <input name="nom" class="form-control" type="text" id="nom" t-att-value="nom"
+                                               required="True"/>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label style="margin-right: 0px;">PRENOM(S) *:</label>
+                                        <input name="prenom" class="form-control" type="text" id="prenom"
+                                               t-att-value="prenom"
+                                               required="True"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label style="margin-right: 0px;">CONTACT *:</label>
+                                        <input name="contact" class="form-control" type="text" id="contact"
+                                               t-att-value="contact"
+                                               required="True"/>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label style="margin-right: 0px;">EMAIL *:</label>
+                                        <input name="email" class="form-control" type="text" id="email"
+                                               t-att-value="email"
+                                               required="True"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label style="margin-right: 0px;">VILLE *:</label>
+                                        <select class="form-control form-control-alternative" name="ville"
+                                                required="True">
+                                            <option value=""></option>
+                                            <t t-foreach="toute_ville" t-as="vil">
+                                                <option t-attf-value="#{vil.id}"
+                                                        t-att-selected="1 if vil.id == ville_id.id else 0">
+                                                    <t t-esc="vil.name"/>
+                                                </option>
+                                            </t>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label>TYPE DE PIECE *:</label>
+                                        <select class="form-control form-control-alternative" name="type_piece"
+                                                required="True">
+                                            <option value=""></option>
+                                            <t t-foreach="tout_type_piece" t-as="type_piece">
+                                                <option t-attf-value="#{type_piece.id}"
+                                                        t-att-selected="1 if type_piece.id == type_piece_id.id else 0">
+                                                    <t t-esc="type_piece.name"/>
+                                                </option>
+                                            </t>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label>N° DE LA PIECE *:</label>
+                                        <input name="numero_piece" class="form-control" type="text" id="numero_piece"
+                                               t-att-value="numero_piece"
+                                               required="True"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <h1 class="text-center" style="font-size:20px;">INFORMATIONS SUR LA LOCATION DU VEHICULE
+                            </h1>
+                            <br/>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="date_naiss">DATE DU DEBUT DE LA LOCATION *:</label>
+                                        <input type="date" class="form-control" required="True"
+                                               name="date_debut_location"
+                                               t-att-value="date_debut_location"/>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="date_naiss">DATE DU FIN DE LA LOCATION *:</label>
+                                        <input type="date" class="form-control" required="True" name="date_fin_location"
+                                               t-att-value="date_fin_location"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label>DUREE DE LA LOCATION *:</label>
+                                        <input name="duree_location" class="form-control" type="number"
+                                               id="duree_location"
+                                               t-att-value="duree_location"
+                                               required="True"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <br/>
+                            <br/>
+                            <div class="row">
+                                <div class="col-md-4"/>
+                                <div class="col-md-4">
+                                    <input type="hidden" name="vehicule" id="vehicule" t-att-value="vehicule.id"/>
+                                    <input type="submit" style="align:left;margin-left: 150px;" class="btn btn-primary"
+                                           value="VALIDER"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </t>
+    </template>
+
+    <template id="succes" name="SUCCES">
+        <t t-call="website.layout">
+            <link href="/location_vehicule/static/src/css/custom-theme.css" rel="stylesheet"/>
+            <div class="oe_structure">
+                <div class="container">
+                    <div class="">
+                        <a style="margin-left:800px;margin-right:0px" class="nav-link" href="/accueil">Retour à la page
+                            d'accueil
+                        </a>
+                    </div>
+                    <div class="col-md-12 form-shadow" style="margin-top:10px">
+                        <div class="row">
+                            <div class="col-md-4"/>
+                            <div class="col-md-4" align="center">
+                                <img src="/location_vehicule/static/description/success.png" class="img-circle"
+                                     alt="Cinque Terre"
+                                     width="150" height="150"/>
+                            </div>
+                        </div>
+                        <div class="page-header">
+                            <h3 class="text-center text-success">Félicitation votre venez d'effecctuer une location du
+                                vehicule
+                                <spam></spam>
+                                <b>
+                                    <span t-esc="vehicule.name"/>
+                                </b>
+                            </h3>
+                            <br/>
+                            <h3 class="text-center text-success">Nous vous contacterons dans un bref delai.
+                            </h3>
+                        </div>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <form action="/accueil" method="POST"
+                                      style="align:left;margin-left:420px;">
+                                    <div class="form-row">
+                                        <input type="hidden" name="location_enreg" id="location_enreg"
+                                               t-att-value="location_enreg.id"/>
+                                        <input type="submit" style="align:left" class="btn btn-primary"
+                                               value="RETOUR A LA PAGE D'ACCUEIL"/>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <br></br>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <template id="desole" name="DESOLE">
+        <t t-call="website.layout">
+            <link href="/location_vehicule/static/src/css/custom-theme.css" rel="stylesheet"/>
+            <div class="oe_structure">
+                <div class="container">
+                    <div class="">
+                        <a style="margin-left:800px;margin-right:0px" class="nav-link" href="/accueil">Retour à la page
+                            d'accueil
+                        </a>
+                    </div>
+                    <div class="col-md-12 form-shadow" style="margin-top:10px">
+                        <div class="row">
+                            <div class="col-md-4"/>
+                            <div class="col-md-4" align="center">
+                                <img src="/location_vehicule/static/description/desole.png" class="img-circle"
+                                     alt="Cinque Terre"
+                                     width="150" height="150"/>
+                            </div>
+                        </div>
+                        <div class="page-header">
+                            <h3 class="text-center text-danger">Désolé, le vehicule que vous avez choisir est deja en
+                                location.
+                            </h3>
+                        </div>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <div class="row">
+                            <div class="col-md-12" align="center">
+                                <a href="/accueil" class="btn btn-danger">RETOUR A LA PAGE D'ACCUEIL</a>
+                            </div>
+
+                        </div>
+                        <br></br>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <template id="gamme_fidelite" name="GAMME DE FIDELITE">
+        <t t-call="website.layout">
+            <link href="/location_vehicule/static/src/css/custom-theme.css" rel="stylesheet"/>
+            <div class="oe_structure">
+                <div class="container">
+                    <div class="">
+                        <a style="margin-left:800px;margin-right:0px" class="nav-link" href="/accueil">Retour à la page
+                            d'accueil
+                        </a>
+                    </div>
+                    <h1 class="text-center">GAMME DE FIDELITE</h1>
+                    <div class="col-md-12 form-shadow" style="margin-top:10px">
+                        <div class="row">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6 pt16 pb16 o_colored_level">
+                                    <img src="/location_vehicule/static/description/gam_fidel.png"
+                                         class="img img-fluid mx-auto" alt="" loading="lazy" data-original-id="279"
+                                         data-original-src="/website/static/src/img/snippets_demo/s_image_text.jpg"
+                                         data-mimetype="image/jpeg"/>
+                                </div>
+                                <div class="col-lg-6 pt16 pb16 o_colored_level">
+                                    <h2 class="o_default_snippet_text">OBTENEZ VOTRE RÉDUCTION POUR LES MEMBRES</h2>
+                                    <p class="o_default_snippet_text">Vous bénéficiez toujours d'une réduction de 10 %
+                                        sur
+                                        notre tarif public pour une location de voiture ou d'utilitaire de plus de 3
+                                        jours,
+                                        sans exclusions ! (*) Vous pouvez économiser encore plus avec les offres
+                                        Privilege
+                                        pendant certaines périodes.Parmi les autres avantages,
+                                        bénéficiez d'un processus plus rapide de prise en charge du véhicule
+                                        et de multiples récompenses telles que des locations gratuites
+                                        le week-end et des coupons de réduction.
+                                    </p>
+                                    <!--                                    <p><a href="#" class="btn btn-primary mb-2 o_default_snippet_text">Découvrir</a></p>-->
+                                </div>
+                            </div>
+                        </div>
+                        <br></br>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <template id="enreg_ligne" name="ENREGISTREMENT EN LIGNE">
+        <t t-call="website.layout">
+            <link href="/location_vehicule/static/src/css/custom-theme.css" rel="stylesheet"/>
+            <div class="oe_structure">
+                <div class="container">
+                    <div class="">
+                        <a style="margin-left:800px;margin-right:0px" class="nav-link" href="/accueil">Retour à la page
+                            d'accueil
+                        </a>
+                    </div>
+                    <h1 class="text-center">Continuez à vous enregistrer en ligne sur l’application</h1>
+                    <div class="col-md-12 form-shadow" style="margin-top:10px">
+                        <div class="row">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6 pt16 pb16 o_colored_level">
+                                    <h2 class="o_default_snippet_text">Vous pourrez remplir certains documents à
+                                        l’avance,
+                                        gérer vos informations de réservation depuis votre téléphone et bien plus
+                                    </h2>
+                                    <p class="o_default_snippet_text">* Téléchargez l’application Europcar via l’un des
+                                        liens ci-dessous
+                                    </p>
+                                    <p class="o_default_snippet_text">* Connectez-vous ou créez un compte</p>
+                                    <p class="o_default_snippet_text">* Sélectionnez votre réservation à venir (ou
+                                        importez-la si elle ne figure pas dans la liste)
+                                    </p>
+                                    <p class="o_default_snippet_text">* Activer l’enregistrement en ligne</p>
+                                    <!--                                <p><a href="#" class="btn btn-primary mb-2 o_default_snippet_text">En savoir plus</a></p>-->
+                                </div>
+                                <div class="col-lg-6 pt16 pb16 o_colored_level">
+                                    <img src="/location_vehicule/static/description/enreg_ligne.png"
+                                         class="img img-fluid mx-auto o_we_selected_image" alt="" loading="lazy"
+                                         data-original-id="280"
+                                         data-original-src="/website/static/src/img/snippets_demo/s_text_image.jpg"
+                                         data-mimetype="image/jpeg"/>
+                                </div>
+                            </div>
+                        </div>
+                        <br></br>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+
+</odoo>

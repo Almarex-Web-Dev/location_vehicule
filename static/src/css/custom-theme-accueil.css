@@ -1,0 +1,109 @@
+header .navbar-brand.logo img {
+    object-fit: contain;
+    display: block;
+    width: auto;
+    height: 5rem;
+}
+
+.navbar-light .navbar-nav .nav-link {
+/* couleur des menus */
+    color: #000000;
+    font-size: 1.29rem;
+}
+.navbar-light {
+/* couleur du cadre des menus */
+    background-color: #ffffff !important;
+}
+
+body {
+    direction: ltr;
+    /* couleur du gros cadre */
+    background: #ffffff;
+}
+
+.o_footer {
+/* couleur du cadre du bas */
+    background-color: #191a1c !important;
+    color: #f6f9f9;
+}
+
+.o_footer_copyright {
+    padding: 3px;
+    background: #133875;
+    color: white;
+}
+
+h1, h2,h3,h4{
+   color: #000000;
+}
+
+.dropdown-item {
+    display: block;
+    width: 100%;
+    padding: 0.25rem 1.5rem;
+    clear: both;
+    font-weight: 400;
+    color: #6E0B14;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: rgba(255, 228, 255, 0.4);
+    border: 0;
+    font-size: 1.1rem;
+    /* background: #20447a; */
+}
+
+.btn-primary {
+    color: #FFFFFF;
+    background-color: #383535;
+    border-color: #000000;
+}
+
+.btn {
+    border-radius:100px ! important;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.5;
+    /*couleur des texts dans les champs **/
+    color: #b33e4c;
+    background-color: #FFFFFF;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    border-radius: 100px;
+}
+
+@media (min-width: 768px)
+.navbar-expand-md .navbar-nav .dropdown-menu {
+    position: absolute;
+    border-radius: 20px;
+}
+
+form label {
+    font-weight: 700;
+    color: #000000;
+}
+
+b, strong {
+    font-weight: bolder;
+    color: #000000;
+}
+
+.table-bordered thead th, .table-bordered thead td {
+    border-bottom-width: 2px;
+    color: #000000;
+}
+
+/* Css pour les div des formulaires **/
+.form-shadow {
+    padding: 30px;
+    box-shadow: 0 4px 8px 0 rgb(120, 120, 120), 0 6px 20px 0 rgb(120, 120, 120);
+    margin-bottom: 5%;
+}

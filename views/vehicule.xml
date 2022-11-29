@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Début vehicule  -->
+        <record id="partner_vehicle_form" model="ir.ui.view">
+            <field name="name">nom.vehicule.form</field>
+            <field name="model">nom.vehicule</field>
+            <field name="arch" type="xml">
+                <form name="car_service_type_form">
+                    <header>
+                        <button string="METTRE EN LOCATION" type="object"
+                                confirm="Voulez-vous mettre ce vehicule en location ?" name="action_confirm"
+                                states="brouillon"/>
+                        <button string="LOUER" type="object" confirm="Voulez-vous mettre ce vehicule comme deja loué ?"
+                                name="action_done" states="ouvert"/>
+                        <button string="BROUILLON" type="object"
+                                confirm="Voulez-vous mettre cette location en brouillon ?" name="action_draft"
+                                states="ouvert,loue"/>
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <widget name="web_ribbon" text="EN LOCATION" bg_color="bg-success"
+                                attrs="{'invisible': [('ouvert', '=', False)]}"/>
+                        <widget name="web_ribbon" text="CLOTURER" bg_color="bg-danger"
+                                attrs="{'invisible': [('cloturer', '=', False)]}"/>
+
+                        <field name="ouvert" invisible="1"/>
+                        <field name="cloturer" invisible="1"/>
+                        <field name="brouillon" invisible="1"/>
+                        <group col="4">
+                            <field name="image" widget="image" class="oe_avatar"/>
+                            <field name="image" widget="image" class="oe_avatar" invisible="1"/>
+                        </group>
+                        <group col="4">
+                            <field name="name" readonly="1"/>
+                            <field name="name" invisible="1"/>
+                        </group>
+                        <group col="4">
+                            <field name="proprietaire" required="1"/>
+                            <field name="montant_journalier" required="1"/>
+                        </group>
+                        <group col="4">
+                            <field name="immatriculation" required="1"/>
+                            <field name="marque_vehicule_id" required="1"/>
+                            <field name="modele_vehicule_id" required="1"/>
+                            <field name="ville" required="1"/>
+                            <field name="date_fin_assurance"/>
+                            <field name="date_fin_visite"/>
+                            <field name="type_carburant"/>
+                        </group>
+                        <group col="4">
+                            <field name="nbre_portiere"/>
+                            <field name="nbre_siege"/>
+                            <field name="kilometrage"/>
+                            <field name="transmission"/>
+                            <field name="couleur_vehicule"/>
+                        </group>
+                        <notebook>
+                            <page string="IMAGES">
+                                <group col="4">
+                                    <field name="image1" widget="image" options="{'size': [150, 140]}"/>
+                                    <field name="image2" widget="image" options="{'size': [150, 140]}"/>
+                                    <field name="image3" widget="image" options="{'size': [150, 140]}"/>
+                                    <field name="image4" widget="image" options="{'size': [150, 140]}"/>
+                                    <field name="image5" widget="image" options="{'size': [150, 140]}"/>
+                                    <field name="image6" widget="image" options="{'size': [150, 140]}"/>
+                                    <field name="image7" widget="image" options="{'size': [150, 140]}"/>
+                                    <field name="image8" widget="image" options="{'size': [150, 140]}"/>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="partner_vehicle_tree" model="ir.ui.view">
+            <field name="name">nom.vehicule.tree</field>
+            <field name="model">nom.vehicule</field>
+            <field name="arch" type="xml">
+                <tree name="partner_vehicle_tree">
+                    <field name="name"/>
+                    <field name="immatriculation"/>
+                    <field name="marque_vehicule_id"/>
+                    <field name="couleur_vehicule"/>
+                    <field name="montant_journalier"/>
+                    <field name="proprietaire"/>
+                </tree>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="partner_vehicle_search">
+            <field name="name">nom.vehicule.search</field>
+            <field name="model">nom.vehicule</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                    <field name="immatriculation"/>
+                    <field name="marque_vehicule_id"/>
+                    <field name="couleur_vehicule"/>
+                    <field name="montant_journalier"/>
+                    <field name="proprietaire"/>
+                </search>
+            </field>
+        </record>
+        <record id="partner_vehicle_action" model="ir.actions.act_window">
+            <field name="name">Véhicules</field>
+            <field name="res_model">nom.vehicule</field>
+            <field name="context">{}</field>
+            <field name="view_mode">tree,form,search</field>
+        </record>
+        <menuitem
+                id="partner_vehicle_menu"
+                name="VEHICULES"
+                parent="location_top_menu"
+                action="partner_vehicle_action"
+                sequence="40"
+        />
+    </data>
+</odoo>

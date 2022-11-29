@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.ui.view" id="location_vehicule_form_view">
+        <field name="name">location.vehicule.form.view</field>
+        <field name="model">location.vehicule</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="button_report_location" string="FICHE DE LOCATION" type="object" class="oe_highlight"
+                            attrs="{'invisible':['|',('state','=','brouillon'),('state','=','annule')]}"/>
+                    <field name="state" widget="statusbar" statusbar_visible="brouillon,confirme,cloture,annule"/>
+                    <button name="generate_invoice" confirm="Voulez-vous générer la facture pour ce locataire ?"
+                            string="Créer facture" type="object" class="btn-primary"
+                            attrs="{'invisible':['|',('state','=','brouillon'),('state','=','annule')]}"/>
+                    <button string="CONFIRMER" type="object" confirm="Voulez-vous confirmer cette location ?"
+                            name="action_confirm" states="brouillon"/>
+                    <button string="CLOTURER" type="object" confirm="Voulez-vous cloturer cette location ?"
+                            name="action_cloturer" states="confirme"/>
+                    <button name="annule_bouton" confirm="Voulez-vous annuler cette location ?" string="Annuler"
+                            type="object" class="" states="brouillon,confirme,cloture"/>
+                </header>
+                <sheet>
+                    <widget name="web_ribbon" text="CONFIRMER" bg_color="bg-success"
+                            attrs="{'invisible': [('confirme', '=', False)]}"/>
+                    <widget name="web_ribbon" text="CLOTURER" bg_color="bg-danger"
+                            attrs="{'invisible': [('cloturer', '=', False)]}"/>
+                    <widget name="web_ribbon" text="ANNULE" bg_color="bg-danger"
+                            attrs="{'invisible': [('annule', '=', False)]}"/>
+
+                    <field name="confirme" invisible="1"/>
+                    <field name="cloturer" invisible="1"/>
+                    <field name="annule" invisible="1"/>
+                    <field name="name" readonly="1"/>
+                    <group string="Informations propriétaire" col="4">
+                        <field name="vehicule_id" required="1"/>
+                        <field name="proprietaire" required="1"/>
+                    </group>
+                    <group string="Informations locataire" col="4">
+                        <field name="locataire" required="1"/>
+                        <field name="type_piece_locataire" required="1"/>
+                        <field name="numero_piece_locataire" required="1"/>
+                    </group>
+
+                    <group col="4" string="Détails de la location">
+                    </group>
+                    <group col="4">
+                        <field name="date_debut_location" required="1"/>
+                        <field name="date_fin_location" required="1"/>
+                        <field name="montant_location_jour"/>
+                        <field name="duree_location" required="1"/>
+                        <field name="montant_location" />
+                        <field name="moyen_paiement"/>
+                    </group>
+                    <notebook>
+                        <page string="INFORMATIONS COMPLÉMENTAIRES">
+                            <group string="Conditions particulières">
+                                <field name="condition_particuliere" placeholder="Conditions particulières..."/>
+                            </group>
+                            <group string="Commentaires sur la location">
+                                <field name="commentaires" placeholder="Notes..."/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+                <!-- Chatter -->
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="location_vehicule_tree_view">
+        <field name="name">location.vehicule.tree.view</field>
+        <field name="model">location.vehicule</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="locataire"/>
+                <field name="date_debut_location"/>
+                <field name="date_fin_location"/>
+                <field name="montant_location_jour"/>
+                <field name="duree_location"/>
+                <field name="montant_location"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="location_vehicule_search">
+        <field name="name">location.vehicule.search</field>
+        <field name="model">location.vehicule</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="locataire"/>
+                <field name="date_debut_location"/>
+                <field name="date_fin_location"/>
+                <field name="montant_location_jour"/>
+                <field name="duree_location"/>
+                <field name="montant_location"/>
+            </search>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="location_vehicule_action">
+        <field name="name">Locations de vehicules</field>
+        <field name="res_model">location.vehicule</field>
+        <field name="view_mode">tree,form,search</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">Créer une location de vehicule</p>
+        </field>
+    </record>
+    <menuitem id="location_menu" name="LOCATIONS" parent="location_top_menu" sequence="30"
+              action="location_vehicule_action"/>
+
+</odoo>

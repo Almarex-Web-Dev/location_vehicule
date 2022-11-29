@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="inherit_res_partner_form" model="ir.ui.view">
+            <field name="name">res.partner.form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='type']" position="before">
+                    <field widget="radio" name="proprietaire_locataire"/>
+                    <field name="type_piece_locataire"/>
+                    <field name="numero_piece_locataire"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="inherit_res_partner_tree" model="ir.ui.view">
+            <field name="name">res.partner.tree</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='user_id']" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </xpath>
+                <xpath expr="//field[@name='email']" position="after">
+                    <field name="function"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_locataire_hr_employee">
+            <field name="name">Locataires</field>
+            <field name="res_model">res.partner</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('proprietaire_locataire','=','locataire')]</field>
+            <field name="context">{'default_proprietaire_locataire':'locataire'}</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Créer un locataire</p>
+            </field>
+        </record>
+
+        <menuitem name="Locataire" id="menu_locataire" parent="location_sub_menu" action="action_locataire_hr_employee"
+                  sequence="1"/>
+
+        <record model="ir.actions.act_window" id="action_proprietaire_hr_employee">
+            <field name="name">Propriétaires</field>
+            <field name="res_model">res.partner</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('proprietaire_locataire','=','proprietaire')]</field>
+            <field name="context">{'default_proprietaire_locataire':'proprietaire'}</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Créer un propriétaire</p>
+            </field>
+        </record>
+
+        <menuitem name="Propriétaire" id="menu_proprietaire" parent="location_sub_menu" action="action_proprietaire_hr_employee"
+                  sequence="2"/>
+    </data>
+</odoo>

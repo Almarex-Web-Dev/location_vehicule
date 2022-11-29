@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="marque_form" model="ir.ui.view">
+        <field name="name">marque.vehicule.form</field>
+        <field name="model">marque.vehicule</field>
+        <field name="arch" type="xml">
+            <form name="marque_form">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="marque_tree" model="ir.ui.view">
+        <field name="name">marque.vehicule.tree</field>
+        <field name="model">marque.vehicule</field>
+        <field name="arch" type="xml">
+            <tree name="marque_tree" editable="bottom">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="marque_search">
+        <field name="name">marque.vehicule.search</field>
+        <field name="model">marque.vehicule</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="marque_action" model="ir.actions.act_window">
+        <field name="name">Marques de véhicule</field>
+        <field name="res_model">marque.vehicule</field>
+        <field name="context">{}</field>
+        <field name="view_mode">tree,form,search</field>
+        <field name="help">Marques de véhicule</field>
+    </record>
+
+    <menuitem
+            id="car_brand_menu"
+            name="Marques de véhicule"
+            parent="location_config_menu"
+            action="marque_action"
+            sequence="1"
+    />
+    <record id="model_form" model="ir.ui.view">
+        <field name="name">modele.vehicule.form</field>
+        <field name="model">modele.vehicule</field>
+        <field name="arch" type="xml">
+            <form name="marque_model_form">
+                <sheet>
+                    <group col="4">
+                        <field name="name"/>
+                        <field name="marque_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="model_tree" model="ir.ui.view">
+        <field name="name">modele.vehicule.tree</field>
+        <field name="model">modele.vehicule</field>
+        <field name="arch" type="xml">
+            <tree name="car_model_tree">
+                <field name="name"/>
+                <field name="marque_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="model_search">
+        <field name="name">modele.vehicule.search</field>
+        <field name="model">modele.vehicule</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="marque_id"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="model_action" model="ir.actions.act_window">
+        <field name="name">Modèles de véhicule</field>
+        <field name="res_model">modele.vehicule</field>
+        <field name="context">{}</field>
+        <field name="view_mode">tree,form,search</field>
+        <field name="help">Modèles de véhicule</field>
+    </record>
+
+    <menuitem
+            id="car_model_menu"
+            name="Modèles de véhicule"
+            parent="location_config_menu"
+            action="model_action"
+            sequence="2"
+    />
+
+    <record model="ir.ui.view" id="type_piece_form_view">
+        <field name="name">type.piece.form.view</field>
+        <field name="model">type.piece</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group col="2">
+                        <field name="name" required="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="type_piece_tree_view">
+        <field name="name">type.piece.tree.view</field>
+        <field name="model">type.piece</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="type_piece_search">
+        <field name="name">type.piece.search</field>
+        <field name="model">type.piece</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+            </search>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="type_piece_action">
+        <field name="name">Type de pièce d'identité</field>
+        <field name="res_model">type.piece</field>
+        <field name="view_mode">tree,form,search</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">Créer un type de pièce d'identité</p>
+        </field>
+    </record>
+
+    <menuitem name="Type de pièce d'identité" id="menu_type_piece" parent="location_config_menu"
+              action="type_piece_action" sequence="6"/>
+
+    <record model="ir.ui.view" id="nom_ville_form_view">
+        <field name="name">nom.ville.form.view</field>
+        <field name="model">nom.ville</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name" required="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="nom_ville_tree_view">
+        <field name="name">nom.ville.tree.view</field>
+        <field name="model">nom.ville</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="nom_ville_search">
+        <field name="name">nom.ville.search</field>
+        <field name="model">nom.ville</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+            </search>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="nom_ville_action">
+        <field name="name">villes</field>
+        <field name="res_model">nom.ville</field>
+        <field name="view_mode">tree,form,search</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">Créer une ville</p>
+        </field>
+    </record>
+
+    <menuitem name="villes" id="menu_nom_ville" parent="location_config_menu" action="nom_ville_action" sequence="5"/>
+
+</odoo>
