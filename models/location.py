@@ -85,7 +85,7 @@ class LocationVehicule(models.Model):
         return result
 
     def button_report_location(self):
-        return self.env.ref('location.report_location_vehicule').report_action(self)
+        return self.env.ref('location_vehicule.report_location_vehicule').report_action(self)
 
     def generate_invoice(self):
         context = self._context.copy()
